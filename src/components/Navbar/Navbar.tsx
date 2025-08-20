@@ -85,8 +85,8 @@ function NavBar() {
   };
   return (
     <AppBar
-      position="static"
-      sx={{ backgroundColor: "#415A77", width: "100%", p: 0 }}
+      position="sticky"
+      sx={{ backgroundColor: "#415A77", width: "100%", p: 0, height: "3.2rem", display: 'flex', justifyContent: 'center', textAlign: 'center' }}
     >
       <Container disableGutters maxWidth="xl">
         <Toolbar>
