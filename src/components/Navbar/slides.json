@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "img": "https://images.unsplash.com/photo-1521334884684-d80222895322?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+    "text": "Nueva Colección Hombre"
+  },
+  {
+    "id": 2,
+    "img": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+    "text": "Ofertas Mujer hasta -50%"
+  },
+  {
+    "id": 3,
+    "img": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+    "text": "Accesorios Exclusivos"
+  }
+]

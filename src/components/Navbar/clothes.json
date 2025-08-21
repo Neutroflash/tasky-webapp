@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "img": "https://picsum.photos/id/1000/600/800",
+    "text": "Abrigos y chaquetas"
+  },
+  {
+    "id": 2,
+    "img": "https://picsum.photos/id/1001/600/800",
+    "text": "Pantalones"
+  },
+  {
+    "id": 3,
+    "img": "https://picsum.photos/id/1002/600/800",
+    "text": "Swaters"
+  },
+  {
+    "id": 4,
+    "img": "https://picsum.photos/id/1003/600/800",
+    "text": "Casacas Deportivas"
+  },
+  {
+    "id": 5,
+    "img": "https://picsum.photos/id/1004/600/800",
+    "text": "Poleras"
+  },
+  {
+    "id": 6,
+    "img": "https://picsum.photos/id/1005/600/800",
+    "text": "Faldas"
+  }
+]
