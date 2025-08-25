@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { colors, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import useEmblaCarousel from "embla-carousel-react";
 import { Box, Typography, Button } from "@mui/material";
@@ -75,8 +75,8 @@ function Principal() {
           </Box>
         </Box>
       </Container>
-      {/* Vestimenta */}
-      <Container maxWidth="xl" sx={{ py: 4}}>
+      {/* Seccion Vestimenta */}
+      <Container disableGutters maxWidth={false}>
         <Grid container spacing={3} justifyContent={'center'} alignContent={'center'}>
           {clothes.map((item) => (
             <Grid key={item.id}>
