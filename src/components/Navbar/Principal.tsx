@@ -77,7 +77,7 @@ function Principal() {
       </Container>
       {/* Seccion Vestimenta */}
       <Container disableGutters maxWidth={false}>
-        <Grid container spacing={3} justifyContent={'center'} alignContent={'center'}>
+        <Grid container spacing={3} justifyContent={'center'} alignContent={'center'} margin={2.5}>
           {clothes.map((item) => (
             <Grid key={item.id}>
               <Card

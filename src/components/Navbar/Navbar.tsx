@@ -15,6 +15,15 @@ import InputBase from "@mui/material/InputBase";
 import { styled, alpha } from "@mui/material/styles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { IconButton, Badge } from "@mui/material";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
 
 const pages = ["Hombre", "Mujer", "Unisex", "Accesorios", "Sale"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -62,31 +71,56 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  // parte del cel
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen);
+  };
+
+  const DrawerList = (
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <List>
+        {pages.map((page, index) => (
+          <ListItem key={page} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={page} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
     <AppBar
       position="sticky"
-      sx={{ backgroundColor: "#415A77", width: "100%", p: 0, height: "3.2rem", display: 'flex', justifyContent: 'center', textAlign: 'center' }}
+      sx={{
+        backgroundColor: "#415A77",
+        width: "100%",
+        p: 0,
+        height: "3.2rem",
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
+      }}
     >
       <Container disableGutters maxWidth="xl">
         <Toolbar>
@@ -110,43 +144,25 @@ function NavBar() {
           >
             Ecommerce
           </Typography>
-
+            {/* Parte cel */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={toggleDrawer(true)}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
-              disableScrollLock
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <div>
+              <Drawer open={open} onClose={toggleDrawer(false)}>
+                {DrawerList}
+              </Drawer>
+            </div>
           </Box>
-          {/* Parte cel */}
+          {/* Fin parte cel */}
           {/* AQUI <- Posible LOGO */}
           {/* <Typography
             variant="h5"
@@ -177,7 +193,6 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
                   color: "white",
