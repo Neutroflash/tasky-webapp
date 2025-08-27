@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "img": "https://picsum.photos/id/1000/600/800",
+    "img": "https://now.com.pe/cdn/shop/files/ABRIGOS-_-JACKETS_900x.jpg?v=1755732715",
     "text": "Abrigos y chaquetas"
   },
   {
     "id": 2,
-    "img": "https://picsum.photos/id/1001/600/800",
+    "img": "https://now.com.pe/cdn/shop/files/SWEATERS_720x.jpg?v=1755732726",
     "text": "Pantalones"
   },
   {
     "id": 3,
-    "img": "https://picsum.photos/id/1002/600/800",
-    "text": "Swaters"
+    "img": "https://now.com.pe/cdn/shop/files/JEANS-_-PANTALONES_720x.jpg?v=1755732737",
+    "text": "Sweters"
   },
   {
     "id": 4,
-    "img": "https://picsum.photos/id/1003/600/800",
+    "img": "https://now.com.pe/cdn/shop/files/POLOS-GRAFICOS_720x.jpg?v=1755732753",
     "text": "Casacas Deportivas"
   },
   {
     "id": 5,
-    "img": "https://picsum.photos/id/1004/600/800",
+    "img": "https://now.com.pe/cdn/shop/files/POLERAS_d2e7c8bb-9002-466d-9298-9b52686a85e2_720x.jpg?v=1755732769",
     "text": "Poleras"
   },
   {
     "id": 6,
-    "img": "https://picsum.photos/id/1005/600/800",
+    "img": "https://now.com.pe/cdn/shop/files/FALDAS-_-SHORTS_720x.jpg?v=1755732782",
     "text": "Faldas"
   }
 ]

@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "img": "https://images.unsplash.com/photo-1521334884684-d80222895322?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+    "img": "https://topitop.vtexassets.com/assets/vtex.file-manager-graphql/images/0be31bd1-1b84-4044-8f25-e4fc997fc0cb___a0ffa40dfd0b6499fb4202c2a36613c2.png",
     "text": "Nueva Colección Hombre"
   },
   {
     "id": 2,
-    "img": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+    "img": "https://topitop.vtexassets.com/assets/vtex.file-manager-graphql/images/bf9067dc-53f2-4f9d-af46-17a80bbe28e0___5d3bef0252f28513905f54c471bacef0.png",
     "text": "Ofertas Mujer hasta -50%"
   },
   {
     "id": 3,
-    "img": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+    "img": "https://topitop.vtexassets.com/assets/vtex.file-manager-graphql/images/7267e606-30c7-4de5-8a6d-028a22e37d88___fa79bf246d406b50b08d4357c4e0594f.png",
     "text": "Accesorios Exclusivos"
   }
 ]

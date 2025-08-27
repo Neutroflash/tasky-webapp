@@ -8,8 +8,9 @@ import slides from "./slides.json";
 import clothes from "./clothes.json";
 import { Card, CardActionArea, CardMedia } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Grid from "@mui/material/Grid";
+import BarraPermanente from "./BarraSuperior";
 
 function Principal() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -26,10 +27,10 @@ function Principal() {
     <>
       <CssBaseline />
       {/* BANNER */}
-      <Container disableGutters maxWidth={false}>
+      <Container disableGutters maxWidth={false} sx={{marginBottom: 3, padding: 0}}>
         <Box
           ref={emblaRef}
-          sx={{ overflow: "hidden", width: "100%", height: "100vh" }}
+          sx={{ overflow: "hidden", width: "100%", height: "100%" }}
         >
           <Box sx={{ display: "flex", height: "100%" }}>
             {slides.map((slide) => (
@@ -74,22 +75,33 @@ function Principal() {
             ))}
           </Box>
         </Box>
+        <BarraPermanente />
       </Container>
       {/* Seccion Vestimenta */}
       <Container disableGutters maxWidth={false}>
-        <Grid container spacing={3} justifyContent={'center'} alignContent={'center'} margin={2.5}>
+        <Grid
+          container
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          spacing={{xs: 2, md: 3}}
+          justifyContent={"center"}
+          alignContent={"center"}
+          margin={2.5}
+          marginTop={0}   
+          
+        >
           {clothes.map((item) => (
-            <Grid key={item.id}>
+            <Grid key={item.id} size={4}>
               <Card
                 sx={{
                   borderRadius: 2,
                   overflow: "hidden",
                   boxShadow: 3,
                   "&:hover .img": { transform: "scale(1.05)" },
+                  maxWidth: 600,
                 }}
               >
                 <CardActionArea onClick={() => console.log("click", item)}>
-                  <Box sx={{ position: "relative" }}>
+                  <Box sx={{ position: "relative", margin: 0}}>
                     <CardMedia
                       component="img"
                       className="img"
@@ -97,8 +109,7 @@ function Principal() {
                       alt={item.text}
                       loading="lazy"
                       sx={{
-                        height: "80vh",
-                        width: "100%",
+                        height: "100%",
                         objectFit: "cover",
                         transition: "transform .35s",
                       }}
