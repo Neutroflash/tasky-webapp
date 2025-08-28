@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "img": "https://now.com.pe/cdn/shop/files/ABRIGOS-_-JACKETS_900x.jpg?v=1755732715",
+    "text": "Casaca cuero Agmes",
+    "costo": 320,
+    "variantes": [
+      {
+        "nombre": "Casaca negra",
+        "img": "https://now.com.pe/cdn/shop/files/ABRIGO-NEGRO_720x.jpg"
+      },
+      {
+        "nombre": "Casaca marrón",
+        "img": "https://now.com.pe/cdn/shop/files/ABRIGO-MARRON_720x.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "img": "https://now.com.pe/cdn/shop/files/SWEATERS_720x.jpg?v=1755732726",
+    "text": "Sueter",
+    "costo": 180,
+    "variantes": [
+      {
+        "nombre": "Suéter azul",
+        "img": "https://now.com.pe/cdn/shop/files/SWEATER-AZUL_720x.jpg"
+      },
+      {
+        "nombre": "Suéter gris",
+        "img": "https://now.com.pe/cdn/shop/files/SWEATER-GRIS_720x.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "img": "https://now.com.pe/cdn/shop/files/JEANS-_-PANTALONES_720x.jpg?v=1755732737",
+    "text": "Pantalon",
+    "costo": 220,
+    "variantes": [
+      {
+        "nombre": "Pantalón jean clásico",
+        "img": "https://now.com.pe/cdn/shop/files/JEANS-CLASICO_720x.jpg"
+      },
+      {
+        "nombre": "Pantalón negro",
+        "img": "https://now.com.pe/cdn/shop/files/JEANS-NEGRO_720x.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "img": "https://now.com.pe/cdn/shop/files/POLOS-GRAFICOS_720x.jpg?v=1755732753",
+    "text": "Polos",
+    "costo": 90,
+    "variantes": [
+      {
+        "nombre": "Polo blanco",
+        "img": "https://now.com.pe/cdn/shop/files/POLO-BLANCO_720x.jpg"
+      },
+      {
+        "nombre": "Polo estampado",
+        "img": "https://now.com.pe/cdn/shop/files/POLO-ESTAMPADO_720x.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "img": "https://now.com.pe/cdn/shop/files/POLERAS_d2e7c8bb-9002-466d-9298-9b52686a85e2_720x.jpg?v=1755732769",
+    "text": "Poleras",
+    "costo": 150,
+    "variantes": [
+      {
+        "nombre": "Polera con capucha",
+        "img": "https://now.com.pe/cdn/shop/files/POLERA-CAPUCHA_720x.jpg"
+      },
+      {
+        "nombre": "Polera oversize",
+        "img": "https://now.com.pe/cdn/shop/files/POLERA-OVERSIZE_720x.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "img": "https://now.com.pe/cdn/shop/files/FALDAS-_-SHORTS_720x.jpg?v=1755732782",
+    "text": "Faldas",
+    "costo": 130,
+    "variantes": [
+      {
+        "nombre": "Falda negra",
+        "img": "https://now.com.pe/cdn/shop/files/FALDA-NEGRA_720x.jpg"
+      },
+      {
+        "nombre": "Short jean",
+        "img": "https://now.com.pe/cdn/shop/files/SHORT-JEAN_720x.jpg"
+      }
+    ]
+  }
+]

@@ -6,7 +6,7 @@ function App() {
   
   return (
    <>
-    <Container maxWidth={false} disableGutters sx={{width: '100%'}}>
+    <Container maxWidth={false} disableGutters sx={{width: '100%', background: '#E0E1DD'}}>
       <NavBar />
       <Principal/>
     </Container>

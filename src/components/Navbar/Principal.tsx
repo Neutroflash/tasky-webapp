@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container } from "@mui/material";
+import { Container, Link } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import useEmblaCarousel from "embla-carousel-react";
 import { Box, Typography, Button } from "@mui/material";
@@ -11,6 +11,7 @@ import IconButton from "@mui/material/IconButton";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Grid from "@mui/material/Grid";
 import BarraPermanente from "./BarraSuperior";
+import NuevaColeccion from "./NuevaColeccion.json";
 
 function Principal() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -27,7 +28,11 @@ function Principal() {
     <>
       <CssBaseline />
       {/* BANNER */}
-      <Container disableGutters maxWidth={false} sx={{marginBottom: 3, padding: 0}}>
+      <Container
+        disableGutters
+        maxWidth={false}
+        sx={{ marginBottom: 3, padding: 0 }}
+      >
         <Box
           ref={emblaRef}
           sx={{ overflow: "hidden", width: "100%", height: "100%" }}
@@ -82,12 +87,11 @@ function Principal() {
         <Grid
           container
           columns={{ xs: 4, sm: 8, md: 12 }}
-          spacing={{xs: 2, md: 3}}
+          spacing={{ xs: 2, md: 3 }}
           justifyContent={"center"}
           alignContent={"center"}
           margin={2.5}
-          marginTop={0}   
-          
+          marginTop={0}
         >
           {clothes.map((item) => (
             <Grid key={item.id} size={4}>
@@ -101,7 +105,7 @@ function Principal() {
                 }}
               >
                 <CardActionArea onClick={() => console.log("click", item)}>
-                  <Box sx={{ position: "relative", margin: 0}}>
+                  <Box sx={{ position: "relative", margin: 0 }}>
                     <CardMedia
                       component="img"
                       className="img"
@@ -134,6 +138,130 @@ function Principal() {
                       >
                         <ChevronRightIcon />
                       </IconButton>
+                    </Box>
+                  </Box>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+      {/* Seccion Nueva Coleccion */}
+      <Container disableGutters maxWidth={false}>
+        {/* Contenedor titulo */}
+        <Box
+          margin={2.5}
+          marginTop={4}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Link
+            href="#"
+            underline="none"
+            fontSize={25}
+            fontWeight={"bold"}
+            sx={{ color: "black" }}
+          >
+            NUEVA COLECCION
+          </Link>
+          <Link
+            href="#"
+            underline="none"
+            sx={{
+              fontSize: 20,
+              fontWeight: "bold",
+              color: "black",
+              position: "relative",
+              display: "inline-block",
+              "&::after, &::before": {
+                content: '""',
+                position: "absolute",
+                width: "100%",
+                height: "2px",
+                background: "black",
+                left: 0,
+                transform: "scaleX(0)",
+                transition: "transform 0.4s ease-out",
+              },
+              "&::after": {
+                bottom: "-5px",
+                transformOrigin: "right",
+              },
+              "&::before": {
+                top: "-5px",
+                transformOrigin: "left",
+              },
+              "&:hover::after, &:hover::before": {
+                transform: "scaleX(1)",
+              },
+            }}
+          >
+            Ver todo
+          </Link>
+        </Box>
+        {/* Contenedor de contenedores de ventas */}
+        <Grid
+          container
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          spacing={{ xs: 2, md: 3 }}
+          alignContent={"center"}
+          margin={2.5}
+          marginTop={0}
+        >
+          {NuevaColeccion.map((item) => (
+            <Grid key={item.id} size={3}>
+              <Card
+                elevation={0}
+                sx={{
+                  overflow: "hidden",
+                  backgroundColor: "transparent",
+                  borderRadius: 2,
+                  maxWidth: 600,
+                }}
+              >
+                <CardActionArea onClick={() => console.log("click", item)}>
+                  <Box sx={{ position: "relative", margin: 0 }}>
+                    <CardMedia
+                      component="img"
+                      className="img"
+                      image={`${item.img}?w=900&fit=crop&auto=format`}
+                      alt={item.text}
+                      loading="lazy"
+                      sx={{
+                        height: "100%",
+                        objectFit: "cover",
+                        transition: "transform .35s",
+                      }}
+                    />
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        margin: 1,
+                      }}
+                    >
+                      <Typography fontWeight={'bold'}>{item.text}</Typography>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        margin: 1,
+                      }}
+                    >
+                      <Typography fontWeight={'bold'}>{item.text}</Typography>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginLeft: 1,
+                      }}
+                    >
+                      <Typography fontWeight={400}>S/ {item.costo}</Typography>
                     </Box>
                   </Box>
                 </CardActionArea>
